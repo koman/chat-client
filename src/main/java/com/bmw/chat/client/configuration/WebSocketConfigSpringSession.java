@@ -14,10 +14,10 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 @EnableWebSocketMessageBroker
 public class WebSocketConfigSpringSession extends AbstractSessionWebSocketMessageBrokerConfigurer<ExpiringSession> {
 
-	@Value("${ebook.chat.relay.host}")
+	@Value("${bmw.chat.relay.host}")
 	private String relayHost;
 
-	@Value("${ebook.chat.relay.port}")
+	@Value("${bmw.chat.relay.port}")
 	private Integer relayPort;
 
 	protected void configureStompEndpoints(StompEndpointRegistry registry) {

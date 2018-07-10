@@ -21,7 +21,7 @@ CREATE TABLE user_role (
 ALTER TABLE user_role ADD CONSTRAINT fk_user_role_role_id FOREIGN KEY (role_id) REFERENCES role (role_id);
 ALTER TABLE user_role ADD CONSTRAINT fk_user_role_username FOREIGN KEY (username) REFERENCES user (username);
 
-INSERT INTO ebook_chat.role VALUES (1,'ROLE_ADMIN');
-INSERT INTO ebook_chat.role VALUES (2,'ROLE_USER');
-INSERT INTO ebook_chat.user VALUES ('admin', 'admin@jorgeacetozi.com.br', 'Jorge Acetozi', '$2a$06$WfXHoFhYT/cXcyNOZQsjMuXRyydgcUTMJcMweF0m8RMub2HS1rCHu');
-INSERT INTO ebook_chat.user_role VALUES ('admin', 1);
+INSERT INTO bmw_chat.role VALUES (1,'ROLE_ADMIN');
+INSERT INTO bmw_chat.role VALUES (2,'ROLE_USER');
+INSERT INTO bmw_chat.user VALUES ('admin', 'admin@jorgeacetozi.com.br', 'Jorge Acetozi', '$2a$06$WfXHoFhYT/cXcyNOZQsjMuXRyydgcUTMJcMweF0m8RMub2HS1rCHu');
+INSERT INTO bmw_chat.user_role VALUES ('admin', 1);

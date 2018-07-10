@@ -16,24 +16,24 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
  
     @Override
     protected String getKeyspaceName() {
-        return "ebook_chat";
+        return "bmw_chat";
     }
     
     @Bean
     @Override
     public CassandraClusterFactoryBean cluster() {
         CassandraClusterFactoryBean cluster = new CassandraClusterFactoryBean();
-//        cluster.setContactPoints("localhost");
-        cluster.setContactPoints("13.80.98.110");
+        cluster.setContactPoints("localhost");
+//        cluster.setContactPoints("13.80.98.110");
         cluster.setPort(9042);
         cluster.setKeyspaceCreations(
         		Arrays.asList(
-        				new CreateKeyspaceSpecification("ebook_chat")
+        				new CreateKeyspaceSpecification("bmw_chat")
         				.ifNotExists()
         				.withSimpleReplication(1))
         		);
         cluster.setStartupScripts(Arrays.asList(
-        		"USE ebook_chat",
+        		"USE bmw_chat",
         		"CREATE TABLE IF NOT EXISTS messages (" +
 					"username text," +
 					"chatRoomId text," +
